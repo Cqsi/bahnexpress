@@ -36,7 +36,7 @@ export function NavbarComponent() {
 
   return (
     <nav className="white border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
             <img src="/be_logo.png" alt="Bahn Express Logo" className="h-16 w-auto" />
@@ -45,7 +45,6 @@ export function NavbarComponent() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</a>
                 <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</a>
-                <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Enterprise</a>
               </div>
             </div>
           </div>
@@ -84,7 +83,7 @@ export function NavbarComponent() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-200 hover:bg-[#7A9BC7] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-200 hover:bg-[#7A9BC7] active:bg-[#7A9BC7] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition duration-150"
               aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -97,9 +96,8 @@ export function NavbarComponent() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Our mission</a>
-            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Enterprise</a>
+            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</a>
+            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</a>
             <div className="mt-4 border-t pt-4">
               <p className="px-3 text-sm font-medium text-gray-500">Select Language</p>
               {languages.map((lang) => (
