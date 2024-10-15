@@ -36,19 +36,23 @@ export function NavbarComponent() {
 
   return (
     <nav className="white border">
-      <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-12 xl:px-16">
+      <div className="px-4 sm:px-12 md:px-12 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between h-24">
+          {/* Logo Section */}
           <div className="flex items-center">
             <img src="/be_logo.png" alt="Bahn Express Logo" className="h-16 w-auto" />
 
+            {/* Desktop Links */}
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</a>
                 <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</a>
+                <a href="#" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Enterprise</a>
               </div>
             </div>
           </div>
-          
+
+          {/* Language Selector */}
           <div className="hidden md:flex items-center">
             <div className="relative" ref={dropdownRef}>
               <button
@@ -80,6 +84,7 @@ export function NavbarComponent() {
             </div>
           </div>
 
+          {/* Mobile Menu Button (Hamburger) */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -93,20 +98,20 @@ export function NavbarComponent() {
         </div>
       </div>
 
+      {/* Mobile Menu Links */}
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</a>
-            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</a>
+            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Our mission</a>
+            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            <a href="#" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Enterprise</a>
             <div className="mt-4 border-t pt-4">
               <p className="px-3 text-sm font-medium text-gray-500">Select Language</p>
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => handleLanguageChange(lang.code)}
-                  className={`w-full text-left text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium ${
-                    currentLang === lang.code ? 'bg-[#e6effa]' : ''
-                  }`}
+                  className={`w-full text-left text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium ${currentLang === lang.code ? 'bg-[#e6effa]' : ''}`}
                 >
                   {lang.name}
                 </button>
