@@ -17,6 +17,18 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-center">Next Section</h2>
         {/* More content */}
       </div>
+      <div className="bg-gray-100 py-12">
+        <h2 className="text-3xl font-bold text-center">Next Section</h2>
+        {/* More content */}
+      </div>
+      <div className="bg-gray-100 py-12">
+        <h2 className="text-3xl font-bold text-center">Next Section</h2>
+        {/* More content */}
+      </div>
+      <div className="bg-gray-100 py-12">
+        <h2 className="text-3xl font-bold text-center">Next Section</h2>
+        {/* More content */}
+      </div>
     </div>
   );
 }

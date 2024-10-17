@@ -35,7 +35,7 @@ export function NavbarComponent() {
   }, [])
 
   return (
-    <nav className="white border">
+    <nav className="border fixed top-0 w-[100%]  backdrop-blur-md bg-white/30">
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
