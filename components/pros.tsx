@@ -1,3 +1,4 @@
+
 export default function Pros() {
 
   const stats = [
@@ -9,8 +10,8 @@ export default function Pros() {
   return (
 
     <div className="px-5 sm:px-6 md:px-8 lg:px-24 xl:px-24 py-12">
-      <div className="bg-[#F9EDCC] rounded-lg max-w mx-auto p-8 pt-16">
-          <h2 className="font-customFont text-5xl text-center mb-8">
+      <div className="bg-[#4a6681] rounded-lg max-w mx-auto p-8 pt-16">
+          <h2 className="text-white font-customFont text-5xl text-center mb-8">
               Auto <i>kolmessa päivässä</i> Ruotsista liikkeen pihalle
           </h2>
 
