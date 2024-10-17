@@ -10,9 +10,10 @@ export default function Hero2() {
             <p className="text-xl text-gray-600 mb-6 text-center lg:text-left">
               Tarjoamme ammattitaitoista ja luotettavaa autonsiirtopalvelua kaikkialla Suomessa.
             </p>
-            <button className=" text-black text-xl border-2 border-black rounded-lg px-6 py-2 hover:bg-[#C4E0F9] transition-colors duration-300">
-              Ota yhteyttä!
-            </button>
+            <button className="text-black text-xl border-2 border-black rounded-lg px-6 py-2 hover:hover:bg-[#C4E0F9] transition-colors duration-300">
+  Ota yhteyttä!
+</button>
+
           </div>
       </div>
 
