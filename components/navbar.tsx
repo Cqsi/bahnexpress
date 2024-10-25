@@ -13,6 +13,8 @@ export function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentLang, setCurrentLang] = useState('fi')
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   const handleLanguageChange = (langCode: string) => {
@@ -34,8 +36,32 @@ export function NavbarComponent() {
     }
   }, [])
 
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY && window.scrollY > 50) {
+        setIsVisible(false) // Hide navbar on scroll down
+      } else if (window.scrollY < lastScrollY) {
+        setIsVisible(true) // Show navbar on scroll up
+      }
+      setLastScrollY(window.scrollY)
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar)
+      return () => {
+        window.removeEventListener('scroll', controlNavbar)
+      }
+    }
+  }, [lastScrollY])
+
   return (
-    <nav className="fixed top-0 w-[100%]  backdrop-blur-md bg-white/30 z-50">
+    <nav
+      className={`fixed top-0 w-[100%] bg-white z-50 border-b-2 border-b-gray-700 transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-20 xl:px-20">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">

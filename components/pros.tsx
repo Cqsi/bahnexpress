@@ -1,41 +1,45 @@
+import React from 'react';
+import { InfoBox } from './InfoBox';
+import { FaMoneyCheckAlt, FaClock } from 'react-icons/fa'; // Importing icons
 
-export default function Pros() {
+import { HiLightningBolt } from "react-icons/hi";
 
-  const stats = [
-    { number: "2-3", description: "Päivää keskimääräinen toimitusaika" },
-    { number: "300-500€", description: "Asiakkaidemme arvioima säästö kuljetuksissa" },
-    { number: "30%", description: "Nopeampi varastonkierto" },
-  ]
+function App() {
+  const boxes = [
+    {
+      title: "30%",
+      description: "Nopeampi varastonkierto",
+      icon: <HiLightningBolt/>, // Icon for stock turnover
+    },
+    {
+      title: "300-500€",
+      description: "Asiakkaidemme arvioima säästö kuljetuksissa",
+      icon: <FaMoneyCheckAlt />, // Icon for delivery savings
+    },
+    {
+      title: "2,2",
+      description: "Päivää keskimääräinen toimitusaika",
+      icon: <FaClock />, // Icon for delivery time
+    },
+  ];
 
   return (
+    <div className="bg-sky-100">
+      <section className="container mx-auto px-4 lg:px-24 pt-16 pb-24">
+        <h1 className="text-4xl md:text-5xl font-bold text-sky-800 text-center mb-16">
+          Auto kolmessa päivässä Ruotsista liikkeen pihalle
+        </h1>
 
-    <div className="px-5 sm:px-6 md:px-8 lg:px-24 xl:px-24 py-12">
-      <div className="bg-[#4a6681] rounded-lg max-w mx-auto p-8 pt-16">
-          <h2 className="text-white font-customFont text-5xl text-center mb-8">
-              Auto <i>kolmessa päivässä</i> Ruotsista liikkeen pihalle
-          </h2>
-
-          
-          <div className="container mx-auto px-4 py-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <div 
-                  key={index} 
-                  className="flex flex-col items-center justify-center p-4 bg-background min-h-[200px]"
-                >
-                  <span className={`text-5xl md:text-6xl font-bold mb-2 ${
-                    index === 1 ? 'text-green-500' : 'text-primary'
-                  }`}>
-                    {stat.number}
-                  </span>
-                  <p className="text-center text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-2xl">
-                    {stat.description}
-                  </p>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-6xl mx-auto mt-20">
+          {boxes.map((box, index) => (
+            <div key={index} className="flex flex-col">
+              <InfoBox title={box.title} description={box.description} icon={box.icon} />
             </div>
-          </div>
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
+
+export default App;

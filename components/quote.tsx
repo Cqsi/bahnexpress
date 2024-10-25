@@ -2,15 +2,15 @@ import { Quote } from "lucide-react"
 
 export default function CustomerQuote() {
   return (
-    <div className="mx-auto sm:px-12 md:px-12 lg:px-24 xl:px-24 py-20 bg-background text-foreground">
-      <div className="flex flex-col md:flex-row gap-8">
+    <div className="mx-auto sm:px-12 md:px-12 lg:px-24 xl:px-24 py-20 bg-[#2E4571] text-foreground">
+      <div className="flex flex-col md:flex-row gap-8 mt-10">
         <div className="flex-1 space-y-4 font-customFont">
-          <Quote className="w-16 h-16 text-primary" />
+          <Quote className="w-16 h-16 text-white" />
           <blockquote className="space-y-4">
-            <p className="text-5xl font-semibold leading-tight">
+            <p className="text-5xl font-semibold leading-tight text-white">
               Ylivertaisen helppo ja nopea palvelu kuljettaa autoja
             </p>
-            <footer className="text-2xl text-muted-foreground">
+            <footer className="text-2xl text-white">
               – Ostojohtaja, asiakasyritys
             </footer>
           </blockquote>
