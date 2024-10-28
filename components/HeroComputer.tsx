@@ -3,7 +3,7 @@ import LogoSlider from "@/components/LogoSliderTest";
 export default function HeroComputer() {
   return (
     <main>
-      <div className="relative w-full h-screen flex">
+      <div className="relative w-full h-[90vh] flex">
         {/* Background image filling the screen */}
         <img
           src="/logos/coverphoto_dark.webp"
