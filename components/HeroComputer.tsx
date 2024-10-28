@@ -3,7 +3,7 @@ import LogoSlider from "@/components/LogoSliderTest";
 export default function HeroComputer() {
   return (
     <main>
-      <div className="relative w-full h-screen flex items-center justify-center">
+      <div className="relative w-full h-screen flex">
         {/* Background image filling the screen */}
         <img
           src="/logos/coverphoto_dark.webp"
@@ -12,11 +12,11 @@ export default function HeroComputer() {
         />
 
         {/* Overlay content */}
-        <div className="relative z-10 text-white p-4 sm:px-8 md:px-12 lg:px-20 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-customFont font-bold py-6">
+        <div className="relative z-10 text-white p-4 sm:px-8 md:px-12 lg:px-20 md:text-left mt-32">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-customFont font-bold py-6">
             Nopeat ja luotettavat autonsiirrot
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 font-customFont">
+          <p className="text-2xl sm:text-xl md:text-2xl mb-6 font-customFont">
             Tarjoamme ammattitaitoista ja luotettavaa autonsiirtopalvelua kaikkialla Suomessa.
           </p>
         </div>
