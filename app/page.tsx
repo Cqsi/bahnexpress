@@ -3,7 +3,7 @@ import HeroComputer from "@/components/HeroComputer";
 import Customer from "@/components/Customer";
 import Stats from "@/components/pros";
 import Quote from "@/components/quote";
-import Footer from "@/components/Footer";
+import Footer from "@/components/foot";
 
 /*
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
