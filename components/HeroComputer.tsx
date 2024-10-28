@@ -12,7 +12,7 @@ export default function HeroComputer() {
         />
 
         {/* Overlay content */}
-        <div className="relative z-10 text-white p-4 sm:px-8 md:px-12 lg:px-20 md:text-left mt-32">
+        <div className="relative z-10 text-white p-4 sm:px-8 md:px-12 lg:px-20 md:text-left mt-28 md:mt-32">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-customFont font-bold py-6">
             Nopeat ja luotettavat autonsiirrot
           </h1>

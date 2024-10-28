@@ -21,7 +21,7 @@ import HeroMobile from "@/components/HeroMobile";
 export default function Home() {
 
   return (
-    <div>
+    <div className="overflow-x-hidden w-full">
       <NavbarComponent></NavbarComponent>
       <HeroComputer></HeroComputer>
       <Customer></Customer>
