@@ -30,9 +30,9 @@ export default function Customer() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row px-20 mx-auto my-8">
+    <div className="flex flex-col md:flex-row mx-auto my-8">
       {/* Left Column */}
-      <div className="flex-1 flex items-center justify-center p-8">
+      <div className="flex-1 flex items-center justify-center mx-10 p-8">
         <p className="text-left text-5xl font-bold text-black">
           Kokonaisvaltainen ja ketterä kuljetusyhtiö, joka on luottamuksen arvoinen.
         </p>
