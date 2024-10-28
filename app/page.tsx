@@ -3,8 +3,10 @@ import HeroComputer from "@/components/HeroComputer";
 import Customer from "@/components/Customer";
 import Stats from "@/components/pros";
 import Quote from "@/components/quote";
+import Footer from "@/components/Footer";
 
 /*
+import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import Pros from "@/components/pros";
 import LogoSlider from "@/components/LogoSlider";
 import Hero from "@/components/hero2";
@@ -25,6 +27,7 @@ export default function Home() {
       <Customer></Customer>
       <Stats></Stats>
       <Quote></Quote>
+      <Footer></Footer>
     </div>
   );
 }

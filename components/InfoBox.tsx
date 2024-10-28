@@ -48,6 +48,7 @@ export function InfoBox({ title, description, icon }: InfoBoxProps) {
       <p className="text-xl text-gray-700 font-bold leading-relaxed text-center mt-6 min-h-[64px]">
         {description}
       </p>
+      
     </div>
   );
 }

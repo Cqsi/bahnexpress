@@ -12,7 +12,8 @@ module.exports = {
   theme: {
   	extend: {
   		animation: {
-  			scroll: 'scroll 10s linear infinite'
+  			scroll: 'scroll 10s linear infinite',
+  			gradient: 'gradient 8s linear infinite'
   		},
   		fontFamily: {
   			customFont: ["Inter", "sans-serif"]
@@ -24,6 +25,11 @@ module.exports = {
   				},
   				'100%': {
   					transform: 'translateX(-1000%)'
+  				}
+  			},
+  			gradient: {
+  				to: {
+  					backgroundPosition: 'var(--bg-size) 0'
   				}
   			}
   		},

@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react"
+import { Quote } from "lucide-react";
 
 export default function CustomerQuote() {
   return (
@@ -23,6 +23,39 @@ export default function CustomerQuote() {
           />
         </div>
       </div>
+
+      {/* Three Column Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-32">
+        {[
+          {
+            title: "Ostajille",
+            content: "Saat autosi nopeasti ja varmasti perille ilman, että katteet ehtivät sulaa. Näin varastosi kiertää tehokkaammin ja toimintasi pysyy sujuvana."
+          },
+          {
+            title: "Myyjille",
+            content: "Saat nopeasti laadukkaat myyntikuvat käyttöösi, jolloin myynnin aloittaminen on nopeaa ja vaivatonta."
+          },
+          {
+            title: "Kuskeille",
+            content: "Lisätuloa aikataulujesi mukaan ja laadukkaat autot sekä reilut palkkiot varmistavat, että saat ansaitsemasi korvauksen."
+          }
+        ].map((box, index) => (
+          <div 
+            key={index} 
+            className="relative pl-4 group hover:transform hover:scale-105 transition-transform duration-300"
+          >
+            {/* Solid line */}
+            <div className="absolute left-0 top-0 h-full w-[2.5px] bg-white"></div>
+            
+            <h3 className="text-white text-3xl font-bold mb-4 tracking-tight">
+              {box.title}
+            </h3>
+            <p className="text-xl text-white/80 leading-relaxed">
+              {box.content}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }

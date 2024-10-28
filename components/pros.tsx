@@ -4,6 +4,7 @@ import { FaMoneyCheckAlt, FaClock } from 'react-icons/fa'; // Importing icons
 
 import { HiLightningBolt } from "react-icons/hi";
 
+
 function App() {
   const boxes = [
     {
@@ -12,7 +13,7 @@ function App() {
       icon: <HiLightningBolt/>, // Icon for stock turnover
     },
     {
-      title: "300-500€",
+      title: "400€",
       description: "Asiakkaidemme arvioima säästö kuljetuksissa",
       icon: <FaMoneyCheckAlt />, // Icon for delivery savings
     },
