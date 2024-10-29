@@ -26,12 +26,12 @@ function App() {
 
   return (
     <div className="bg-sky-100">
-      <section className="container mx-auto px-4 lg:px-24 pt-16 pb-24">
-        <h1 className="text-4xl md:text-5xl font-bold text-sky-800 text-center mb-16">
+      <section className="container mx-auto px-4 lg:px-24 pt-16 pb-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-sky-800 text-center">
           Auto kolmessa päivässä Ruotsista liikkeen pihalle
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-6xl mx-auto mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 max-w-6xl mx-auto mt-16">
           {boxes.map((box, index) => (
             <div key={index} className="flex flex-col">
               <InfoBox title={box.title} description={box.description} icon={box.icon} />

@@ -7,7 +7,7 @@ export default function CustomerQuote() {
         <div className="flex-1 space-y-4 font-customFont">
           <Quote className="w-16 h-16 text-white" />
           <blockquote className="space-y-4">
-            <p className="text-5xl font-semibold leading-tight text-white">
+            <p className="text-4xl md:text-5xl font-semibold leading-tight text-white">
               Ylivertaisen helppo ja nopea palvelu kuljettaa autoja
             </p>
             <footer className="text-2xl text-white">
