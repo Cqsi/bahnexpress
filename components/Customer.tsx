@@ -42,7 +42,7 @@ export default function Customer() {
         {/* Top Row */}
         <div className="flex-1 flex items-center justify-center p-4 md:p-8">
           <div className="flex flex-col items-center">
-            <p className="text-3xl md:text-4xl font-semibold text-center text-black z-10">
+            <p className="text-3xl md:text-4xl font-semibold text-center text-black z-10 mt-6 md:mt-0">
               Asiakastyytyväisyys
             </p>
             <div className="flex items-center">

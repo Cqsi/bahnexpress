@@ -2,7 +2,7 @@ import { Quote } from "lucide-react";
 
 export default function CustomerQuote() {
   return (
-    <div className="mx-auto sm:px-12 md:px-12 lg:px-24 xl:px-24 py-20 bg-[#2E4571] text-foreground">
+    <div className="mx-auto px-8 sm:px-12 md:px-12 lg:px-24 xl:px-24 py-10 md:py-20 bg-[#2E4571] text-foreground">
       <div className="flex flex-col md:flex-row gap-8 mt-10">
         <div className="flex-1 space-y-4 font-customFont">
           <Quote className="w-16 h-16 text-white" />
