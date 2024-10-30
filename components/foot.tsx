@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:max-w-3xl">
           {/* Navigation Links Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-6 text-gray-200">Navigointi</h3>
+            <h3 className="text-lg font-semibold text-gray-200">Navigointi</h3>
             <nav>
               <ul className="space-y-3">
                 <li>
@@ -44,11 +44,10 @@ export default function Footer() {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold mb-6 text-gray-200">Ota yhteyttä</h3>
+            <h3 className="text-lg font-semibold text-gray-200">Ota yhteyttä</h3>
             <div className="text-gray-300 space-y-2">
-              <p>Puhelin: +358 (0)9 123 4567</p>
-              <p>Sähköposti: info@bahnexpress.fi</p>
-              <p>Ma-Pe: 9:00 - 17:00</p>
+              <p>Sähköposti: matias@bahnexpress.fi</p>
+              <p>Puhelin: 0400 257 961</p>
             </div>
           </div>
         </div>

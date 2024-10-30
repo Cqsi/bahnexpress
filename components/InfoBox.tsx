@@ -36,7 +36,7 @@ export function InfoBox({ title, description, icon }: InfoBoxProps) {
   return (
     <div
       ref={ref}
-      className={`bg-white rounded-lg overflow-hidden flex flex-col items-center justify-center p-8 aspect-square transition-opacity duration-1000 mx-16 mb-10 md:mx-0 border-4 border-black ${
+      className={`bg-white rounded-lg overflow-hidden flex flex-col items-center justify-center p-8 aspect-square transition-opacity duration-1000 mx-4 mb-10 border-black border-4 md:mx-0${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
@@ -44,6 +44,7 @@ export function InfoBox({ title, description, icon }: InfoBoxProps) {
       <h2 className="text-5xl md:text-6xl font-semibold text-sky-800 text-center">
         {title}
       </h2>
+      {/* Description with consistent height */}
       <p className="text-xl md:text-2xl text-gray-700 font-bold leading-relaxed text-center mt-4 min-h-[64px]">
         {description}
       </p>

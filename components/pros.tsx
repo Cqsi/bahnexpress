@@ -5,7 +5,7 @@ import { FaMoneyCheckAlt, FaClock } from 'react-icons/fa'; // Importing icons
 import { HiLightningBolt } from "react-icons/hi";
 
 
-function App() {
+export default function App() {
   const boxes = [
     {
       title: "30%",
@@ -42,5 +42,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
