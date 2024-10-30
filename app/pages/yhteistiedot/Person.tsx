@@ -1,4 +1,5 @@
 import { Phone, Mail} from 'lucide-react'
+import Link from 'next/link'
 
 export default function Person() {
   return (
@@ -37,12 +38,12 @@ export default function Person() {
               <div className="mt-16 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 sm:text-2xl">OY BAHN EXPRESS AB</h3>
                 <p className="mt-4 text-xl text-sm text-gray-700">Y-tunnus: 3414813-4</p>
-                <a
-                  href="#"
+                <Link
+                  href="/pages/privacypolicy"
                   className="mt-4 text-xl inline-block text-sm text-blue-600 hover:text-blue-800"
                 >
                   Rekisteri- ja tietosuojaseloste
-                </a>
+                </Link>
               </div>
             </div>
           </div>
