@@ -1,11 +1,13 @@
+import Footer from "@/components/foot";
 import { NavbarComponent } from "@/components/navbar";
+import Person from "./Person";
 
 export default function Yhteistiedot() {
     return (
       <div>
         <NavbarComponent></NavbarComponent>
-        <h1 className="mt-32">Yhteistiedot</h1>
-        
+        <Person></Person>
+        <Footer></Footer>
       </div>
     );
   }
