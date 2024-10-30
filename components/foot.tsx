@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -30,13 +31,14 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="/tietosuoja" 
+                  <Link 
+                    href="/pages/privacypolicy" 
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
+                    passHref
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
-                    Rekisteri- ja tietosuojaseloste
-                  </a>
+                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
+                      Rekisteri- ja tietosuojaseloste
+                  </Link>
                 </li>
               </ul>
             </nav>
