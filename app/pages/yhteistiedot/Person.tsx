@@ -1,4 +1,4 @@
-import { Phone, Mail, Menu } from 'lucide-react'
+import { Phone, Mail} from 'lucide-react'
 
 export default function Person() {
   return (
