@@ -72,3 +72,10 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+@media (hover: hover) {
+  .hover-blue-on-hover:hover {
+    background-color: #7A9BC7;
+    color: #e5e7eb;   
+  }
+}

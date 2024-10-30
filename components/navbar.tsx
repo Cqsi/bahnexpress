@@ -109,7 +109,7 @@ export function NavbarComponent() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-200 hover:bg-[#7A9BC7] focus:outline-none transition-colors duration-150"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none hover-blue-on-hover"
               aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
