@@ -27,7 +27,7 @@ export default function Palvelut() {
   return (
     <div className="w-full">
       <NavbarComponent />
-      <div className="flex flex-col space-y-16 mb-24 mt-28 md:px-12 lg:px-36">
+      <div className="flex flex-col space-y-4 mb-24 mt-28 md:px-12 lg:px-28 xl:px-36">
         {sections.map((section, index) => (
           <div
             key={index}
