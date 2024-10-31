@@ -45,6 +45,7 @@ export default function Palvelut() {
                 alt={section.title}
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </div>

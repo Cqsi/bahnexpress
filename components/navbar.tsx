@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link';
-
 import { useState, useRef, useEffect } from 'react'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 
@@ -23,6 +22,18 @@ export function NavbarComponent() {
     setCurrentLang(langCode)
     setIsLangDropdownOpen(false)
     // Here you would typically also change the language in your i18n setup
+  }
+
+  const closeNavbar = () => {
+    setIsOpen(false);
+  }
+
+  const handleLinkClick = (href: string) => {
+    if (href === window.location.pathname) {
+      window.location.reload(); // Reload the page if the link is active
+    } else {
+      closeNavbar(); // Close the navbar if the link is different
+    }
   }
 
   useEffect(() => {
@@ -67,22 +78,19 @@ export function NavbarComponent() {
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-20 xl:px-20">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-          
-
             <Link href="/">
               <img src="/be_logo.png" alt="Bahn Express Logo" className="h-16 w-auto" />
             </Link>
 
-
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Etusivu</Link>
-                <Link href="/pages/palvelut" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</Link>
-                <Link href="/pages/yhteistiedot" className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</Link>
+                <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Etusivu</Link>
+                <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</Link>
+                <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</Link>
               </div>
             </div>
           </div>
-          
+
           <div className="hidden md:flex items-center">
             <div className="relative" ref={dropdownRef}>
               <button
@@ -130,18 +138,16 @@ export function NavbarComponent() {
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Etusivu</Link>
-            <Link href="/pages/palvelut" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</Link>
-            <Link href="/pages/yhteistiedot" className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</Link>
+            <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Etusivu</Link>
+            <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</Link>
+            <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</Link>
             <div className="mt-4 border-t pt-4">
               <p className="px-3 text-sm font-medium text-gray-500">Select Language</p>
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => handleLanguageChange(lang.code)}
-                  className={`w-full text-left text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium ${
-                    currentLang === lang.code ? 'bg-[#e6effa]' : ''
-                  }`}
+                  className={`w-full text-left text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium ${currentLang === lang.code ? 'bg-[#e6effa]' : ''}`}
                 >
                   {lang.name}
                 </button>
