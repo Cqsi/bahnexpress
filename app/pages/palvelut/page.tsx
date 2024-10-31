@@ -8,19 +8,19 @@ export default function Palvelut() {
       title: "Ostajille",
       content:
         "Saat autosi nopeasti ja varmasti perille ilman, että katteet ehtivät sulaa. Näin varastosi kiertää tehokkaammin ja toimintasi pysyy sujuvana.",
-      image: "/car.jpg",
+      image: "/car.webp",
     },
     {
       title: "Myyjille",
       content:
         "Saat nopeasti laadukkaat myyntikuvat käyttöösi, jolloin myynnin aloittaminen on nopeaa ja vaivatonta.",
-      image: "/dealership.jpg",
+      image: "/dealership.webp",
     },
     {
       title: "Kuskeille",
       content:
         "Lisätuloa aikataulujesi mukaan ja laadukkaat autot sekä reilut palkkiot varmistavat, että saat ansaitsemasi korvauksen.",
-      image: "/driver.jpg",
+      image: "/driver.webp",
     },
   ];
 
@@ -34,8 +34,8 @@ export default function Palvelut() {
             className="flex flex-col md:flex-row items-center md:items-stretch space-y-8 md:space-y-0 md:space-x-8 bg-white rounded-lg p-6 lg:p-10"
           >
             {/* Text Content */}
-            <div className="md:w-1/2 lg:w-3/5 flex flex-col justify-center space-y-4">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-gray-800">{section.title}</h2>
+            <div className="md:w-1/2 lg:w-3/5 flex flex-col justify-center space-y-2">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">{section.title}</h2>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed">{section.content}</p>
             </div>
             {/* Image Content */}

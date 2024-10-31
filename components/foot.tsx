@@ -15,29 +15,25 @@ export default function Footer() {
                 <li>
                   <Link 
                     href="/pages/palvelut" 
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
                     Palvelut
                   </Link>
                 </li>
                 <li>
                   <Link 
                     href="/pages/yhteistiedot" 
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                    <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
                     Yhteistiedot
                   </Link>
                 </li>
                 <li>
                   <Link 
                     href="/pages/privacypolicy" 
-                    className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
-                    passHref
+                    className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                      <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
-                      Rekisteri- ja tietosuojaseloste
+                    Rekisteri- ja tietosuojaseloste
                   </Link>
                 </li>
               </ul>
