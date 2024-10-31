@@ -13,22 +13,22 @@ export default function Footer() {
             <nav>
               <ul className="space-y-3">
                 <li>
-                  <a 
-                    href="/palvelut" 
+                  <Link 
+                    href="/pages/palvelut" 
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
                   >
                     <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
                     Palvelut
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a 
-                    href="/yhteistiedot" 
+                  <Link 
+                    href="/pages/yhteistiedot" 
                     className="text-gray-300 hover:text-white transition-colors duration-200 flex items-center justify-center group"
                   >
                     <span className="w-1 h-1 bg-gray-500 rounded-full mr-2 group-hover:bg-white transition-colors duration-200"></span>
                     Yhteistiedot
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link 
