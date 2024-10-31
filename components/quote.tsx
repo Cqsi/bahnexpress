@@ -42,7 +42,7 @@ export default function CustomerQuote() {
         ].map((box, index) => (
           <div 
             key={index} 
-            className="relative pl-4 group hover:transform hover:scale-105 transition-transform duration-300"
+            className="relative pl-4 group hover-scale-on-hover transition-transform duration-300"
           >
             {/* Solid line */}
             <div className="absolute left-0 top-0 h-full w-[2.5px] bg-white"></div>

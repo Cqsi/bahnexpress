@@ -67,7 +67,12 @@ export function NavbarComponent() {
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-20 xl:px-20">
         <div className="flex items-center justify-between h-24">
           <div className="flex items-center">
-            <img src="/be_logo.png" alt="Bahn Express Logo" className="h-16 w-auto" />
+          
+
+            <Link href="/">
+              <img src="/be_logo.png" alt="Bahn Express Logo" className="h-16 w-auto" />
+            </Link>
+
 
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">

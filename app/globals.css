@@ -78,4 +78,7 @@ html, body {
     background-color: #7A9BC7;
     color: #e5e7eb;   
   }
+  .hover-scale-on-hover:hover {
+    transform: scale(1.05);
+  }
 }
