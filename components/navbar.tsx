@@ -7,7 +7,6 @@ import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 const languages = [
   { code: 'fi', name: 'Suomi' },
   { code: 'en', name: 'English' },
-  { code: 'sv', name: 'Svenska' },
 ]
 
 export function NavbarComponent() {
@@ -85,7 +84,7 @@ export function NavbarComponent() {
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Etusivu</Link>
-                <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</Link>
+                {/* <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</Link> */}
                 <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</Link>
               </div>
             </div>
@@ -139,7 +138,7 @@ export function NavbarComponent() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Etusivu</Link>
-            <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</Link>
+            {/* <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</Link> */}
             <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</Link>
             <div className="mt-4 border-t pt-4">
               <p className="px-3 text-sm font-medium text-gray-500">Select Language</p>

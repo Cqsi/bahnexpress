@@ -12,14 +12,14 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-gray-200">Navigointi</h3>
             <nav>
               <ul className="space-y-3">
-                <li>
+                {/* <li>
                   <Link 
                     href="/pages/palvelut" 
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     Palvelut
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link 
                     href="/pages/yhteistiedot" 
@@ -46,6 +46,7 @@ export default function Footer() {
             <div className="text-gray-300 space-y-2">
               <p>Sähköposti: matias@bahnexpress.fi</p>
               <p>Puhelin: 0400 257 961</p>
+              <p>Y-tunnus: 3414813-4</p>
             </div>
           </div>
         </div>
