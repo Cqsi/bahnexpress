@@ -13,7 +13,7 @@ export function NavbarComponent() {
   const [isOpen, setIsOpen] = useState(false)
   const [currentLang, setCurrentLang] = useState('fi')
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
@@ -60,19 +60,28 @@ export function NavbarComponent() {
   }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar)
+    const delay = setTimeout(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setIsVisible(true); // Reveal navbar on first scroll after delay
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      // Clean up the event listener when component unmounts
       return () => {
-        window.removeEventListener('scroll', controlNavbar)
-      }
-    }
-  }, [lastScrollY])
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, 2000); // Adjust the delay (e.g., 2000ms for 2 seconds)
+  
+    return () => clearTimeout(delay); // Clear the delay if component unmounts
+  }, []);
 
   return (
     <nav
       className={`fixed top-0 w-[100%] bg-white z-50 border-b-2 border-b-gray-700 transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
+      isVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-20 xl:px-20">
         <div className="flex items-center justify-between h-24">
