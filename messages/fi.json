@@ -1,0 +1,20 @@
+{
+    "navigation": {
+      "home": "Etusivu",
+      "contacts": "Yhteistiedot",
+      "selectLanguage": "Valitse kieli"
+    },
+    "home": {
+      "title": "Tervetuloa Bahn Expressille",
+      "subtitle": "Luotettava kuljetuskumppanisi",
+      "description": "Tarjoamme luotettavia ja tehokkaita kuljetuspalveluja kaikkialla Suomessa"
+    },
+    "contacts": {
+      "title": "Yhteystiedot",
+      "companyInfo": {
+        "name": "OY BAHN EXPRESS AB",
+        "businessId": "Y-tunnus: 3414813-4"
+      },
+      "privacyPolicy": "Rekisteri- ja tietosuojaseloste"
+    }
+  }

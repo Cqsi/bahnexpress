@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 const languages = [
   { code: 'fi', name: 'Suomi' },
@@ -10,6 +11,7 @@ const languages = [
 ]
 
 export function NavbarComponent() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [currentLang, setCurrentLang] = useState('fi')
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false)
@@ -49,39 +51,54 @@ export function NavbarComponent() {
   }, [])
 
   const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && pathname === '/') {
       if (window.scrollY > lastScrollY && window.scrollY > 50) {
-        setIsVisible(false) // Hide navbar on scroll down
+        setIsVisible(false) // Hide navbar on scroll down only on main page
       } else if (window.scrollY < lastScrollY) {
         setIsVisible(true) // Show navbar on scroll up
       }
       setLastScrollY(window.scrollY)
+    } else {
+      setIsVisible(true) // Always show navbar on other pages
     }
   }
 
   useEffect(() => {
+    if (pathname !== '/') {
+      setIsVisible(true) // Always show navbar on non-main pages
+      return
+    }
+
     const delay = setTimeout(() => {
       const handleScroll = () => {
         if (window.scrollY > 50) {
-          setIsVisible(true); // Reveal navbar on first scroll after delay
+          setIsVisible(true); // Reveal navbar on first scroll after delay (only on main page)
         }
       };
   
       window.addEventListener('scroll', handleScroll);
   
-      // Clean up the event listener when component unmounts
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-    }, 2000); // Adjust the delay (e.g., 2000ms for 2 seconds)
+    }, 2000);
   
-    return () => clearTimeout(delay); // Clear the delay if component unmounts
-  }, []);
+    return () => clearTimeout(delay);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (pathname === '/') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY, pathname]);
 
   return (
     <nav
       className={`fixed top-0 w-[100%] bg-white z-50 border-b-2 border-b-gray-700 transition-transform duration-300 ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      pathname === '/' ? (isVisible ? 'translate-y-0' : '-translate-y-full') : 'translate-y-0'}`}
     >
       <div className="mx-auto px-6 sm:px-12 md:px-12 lg:px-20 xl:px-20">
         <div className="flex items-center justify-between h-24">
@@ -93,7 +110,6 @@ export function NavbarComponent() {
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Etusivu</Link>
-                {/* <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Palvelut</Link> */}
                 <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</Link>
               </div>
             </div>
@@ -147,7 +163,6 @@ export function NavbarComponent() {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Etusivu</Link>
-            {/* <Link href="/pages/palvelut" onClick={() => handleLinkClick('/pages/palvelut')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Palvelut</Link> */}
             <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] block px-3 py-2 rounded-md text-base font-medium">Yhteistiedot</Link>
             <div className="mt-4 border-t pt-4">
               <p className="px-3 text-sm font-medium text-gray-500">Select Language</p>
@@ -165,5 +180,5 @@ export function NavbarComponent() {
         </div>
       )}
     </nav>
-  )
+  );
 }

@@ -1,0 +1,20 @@
+{
+    "navigation": {
+      "home": "Home",
+      "contacts": "Contacts",
+      "selectLanguage": "Select Language"
+    },
+    "home": {
+      "title": "Welcome to Bahn Express",
+      "subtitle": "Your Trusted Transport Partner",
+      "description": "We provide reliable and efficient transport services across Finland"
+    },
+    "contacts": {
+      "title": "Contact Information",
+      "companyInfo": {
+        "name": "OY BAHN EXPRESS AB",
+        "businessId": "Business ID: 3414813-4"
+      },
+      "privacyPolicy": "Privacy Policy"
+    }
+  }
