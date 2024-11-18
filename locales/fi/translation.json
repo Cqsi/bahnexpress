@@ -1,3 +1,7 @@
 {
-    "front": "Etusivu"
+    "home": "Etusivu",
+    "contact": "Yhteistiedot",
+
+    "hero-title": "Nopeat ja luotettavat autonsiirrot",
+    "hero-text": "Tarjoamme ammattitaitoista ja luotettavaa autonsiirtopalvelua kaikkialla Suomessa."
 }
