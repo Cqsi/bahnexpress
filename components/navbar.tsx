@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { usePathname } from 'next/navigation'
+import { useTranslation } from 'react-i18next';
 
 const languages = [
   { code: 'fi', name: 'Suomi' },
@@ -19,10 +20,12 @@ export function NavbarComponent() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
+  const { i18n, t } = useTranslation();
+
   const handleLanguageChange = (langCode: string) => {
     setCurrentLang(langCode)
     setIsLangDropdownOpen(false)
-    // Here you would typically also change the language in your i18n setup
+    i18n.changeLanguage(langCode).catch(err => console.error("Language change failed", err));
   }
 
   const closeNavbar = () => {
@@ -109,7 +112,7 @@ export function NavbarComponent() {
 
             <div className="hidden md:block font-customFont">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Etusivu</Link>
+                <Link href="/" onClick={() => handleLinkClick('/')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">{t('front')}</Link>
                 <Link href="/pages/yhteistiedot" onClick={() => handleLinkClick('/pages/yhteistiedot')} className="text-black hover:bg-[#e6effa] px-8 py-2 rounded-md text-xl font-medium">Yhteistiedot</Link>
               </div>
             </div>

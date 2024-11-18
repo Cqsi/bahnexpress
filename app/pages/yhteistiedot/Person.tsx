@@ -12,14 +12,14 @@ const persons = [
   {
     id: 1,
     name: "Atte Vesala",
-    image: "/matias.webp",
+    image: "/atte.jpeg",
     email: "matias@bahnexpress.fi",
     phone: "+358 400257961"
   },
   {
     id: 1,
     name: "Sakari Vanhanen",
-    image: "/matias.webp",
+    image: "/sakari.jpeg",
     email: "matias@bahnexpress.fi",
     phone: "+358 400257961"
   },
