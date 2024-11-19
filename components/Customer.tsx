@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
 export default function Customer() {
   const [isVisible, setIsVisible] = useState(false);
   const countUpRef = useRef(null);
+  const {t} = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,7 +36,7 @@ export default function Customer() {
       {/* Left Column */}
       <div className="flex-1 flex items-center justify-center p-4 md:p-8">
         <p className="text-left text-4xl md:text-5xl font-bold text-black">
-          Kokonaisvaltainen ja ketterä kuljetusyhtiö, joka on luottamuksen arvoinen.
+          {t('description')}
         </p>
       </div>
       {/* Right Column */}
@@ -43,7 +45,7 @@ export default function Customer() {
         <div className="flex-1 flex items-center justify-center p-4 md:p-8">
           <div className="flex flex-col items-center">
             <p className="text-3xl md:text-4xl font-semibold text-center text-black z-10 mt-6 md:mt-0">
-              Asiakastyytyväisyys
+              {t('reviews')}
             </p>
             <div className="flex items-center">
               <p className="text-3xl md:text-4xl font-semibold text-black mr-2">5,0</p>
@@ -55,7 +57,7 @@ export default function Customer() {
         <div className="flex-1 flex items-center justify-center p-4 md:p-8">
           <div className="flex flex-col items-center">
             <p className="text-3xl md:text-4xl font-semibold text-center text-black">
-              Ulkomailta ajettua ajoneuvoja asiakkaille
+              {t('drives')}
             </p>
             <p className="text-5xl md:text-6xl font-semibold text-center text-black mt-3" ref={countUpRef}>
               +

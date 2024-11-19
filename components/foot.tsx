@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+
+  const {t} = useTranslation();
+
   return (
     <footer className="bg-[#1F2335] text-white">
       {/* Main footer content */}
@@ -9,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:max-w-3xl">
           {/* Navigation Links Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-200">Navigointi</h3>
+            <h3 className="text-lg font-semibold text-gray-200">{t('navigation')}</h3>
             <nav>
               <ul className="space-y-3">
                 {/* <li>
@@ -25,7 +30,7 @@ export default function Footer() {
                     href="/pages/yhteistiedot" 
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                    Yhteistiedot
+                    {t('contact')}
                   </Link>
                 </li>
                 <li>
@@ -33,7 +38,7 @@ export default function Footer() {
                     href="/pages/privacypolicy" 
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
-                    Rekisteri- ja tietosuojaseloste
+                    {t('privacy')}
                   </Link>
                 </li>
               </ul>
@@ -42,11 +47,11 @@ export default function Footer() {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-200">Ota yhteyttä</h3>
+            <h3 className="text-lg font-semibold text-gray-200">{t("contact-us")}</h3>
             <div className="text-gray-300 space-y-2">
-              <p>Sähköposti: matias@bahnexpress.fi</p>
-              <p>Puhelin: 0400 257 961</p>
-              <p>Y-tunnus: 3414813-4</p>
+              <p>{t("e-mail")}</p>
+              <p>{t("phone")}</p>
+              <p>{t("business-id")}</p>
             </div>
           </div>
         </div>

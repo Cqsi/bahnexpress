@@ -1,4 +1,36 @@
 {
     "home": "Home",
-    "contact": "Contact"
+    "contact": "Contact",
+
+    "hero-title": "Fast and reliable automotive transport",
+    "hero-text": "We offer professional and reliable car transfer services all across Finland.",
+
+    "description": "A comprehensive and agile transport company that is worthy of your trust.",
+    "reviews": "Customer Satisfaction",
+    "drives": "Cars transported from abroad",
+
+    "sweden": "Three day delivery promise from Sweden",
+    "percent": "Faster stock turnaround",
+    "money": "Estimated savings per transport",
+    "time": "Days average delivery time",
+
+    "quote": "An exceptionally easy and fast service to transport cars",
+    "quote-person": "– Purchasing Director, customer",
+
+    "buyer": "For Buyers",
+    "buyer-text": "Get your car delivered quickly and reliably without losing margins. This way, your inventory turns over more efficiently, and your operations run smoothly.",
+
+    "seller": "For Sellers",
+    "seller-text": "Quickly receive high-quality sales images, making it fast and effortless to start selling.",
+
+    "driver": "For Drivers",
+    "driver-text": "Earn extra income on your schedule, and high-quality cars with fair rewards ensure you receive the compensation you deserve.",
+
+    "navigation": "Navigation",
+    "privacy": "Registry and Privacy Statement",
+
+    "contact-us": "Contact Us",
+    "e-mail": "Email: matias@bahnexpress.fi",
+    "phone": "Phone: 0400 257 961",
+    "business-id": "Business ID: 3414813-4"
 }
